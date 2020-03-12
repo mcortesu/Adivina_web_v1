@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h3>Escribe tu apuesta</h3>
+
+    <label style = "display:{{mostrar}};">{{mensaje}}</label>
+    <form method="POST" action="/juego">
+        <label>Limite inferior <strong>{{minimo}}</strong></label>
+        <input type = text name="guess" placeholder = "Introduzca su apuesta">
+        <label>Limite inferior <strong>{{maximo}}</strong></label>
+
+        <button type = submit>Jugar</button>
+    </form>
+
+{% endblock content %}
